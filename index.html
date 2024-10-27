@@ -3,50 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website</title>
+    <title>Portfolio - Nikhil Sharma</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Styles */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column;
+            color: #333;
+            background-color: #0d0d0d;
+            overflow: hidden;
         }
-        header {
-            font-size: 2.5em;
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            width: 100%;
+        }
+        .hero h1 {
+            font-size: 3em;
             font-weight: bold;
-            color: #008080;
+            animation: fadeIn 1.5s ease-in-out;
         }
-        p {
-            font-size: 1.2em;
-            margin: 20px 0;
+        .hero p {
+            margin-top: 10px;
+            font-size: 1.5em;
+            opacity: 0;
+            animation: slideUp 1.5s ease-in-out forwards;
+            animation-delay: 0.5s;
         }
-        a {
-            text-decoration: none;
-            color: #008080;
+        /* Animated Button */
+        .hero .button {
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 1em;
             font-weight: bold;
-        }
-        .button {
-            padding: 10px 20px;
+            color: #ffffff;
             background-color: #008080;
-            color: #fff;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
+            outline: none;
+            border-radius: 5px;
+            transform: scale(1);
+            transition: transform 0.3s ease;
         }
-        .button:hover {
+        .hero .button:hover {
+            transform: scale(1.1);
             background-color: #006666;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <header>Welcome to My Website</header>
-    <p>Hi! I'm Nikhil, and this is my personal space on the web. Here, you'll find my projects, blogs, and more.</p>
-    <button class="button" onclick="window.location.href='https://github.com/nikhilsearch'">Visit My GitHub</button>
+    <div class="hero">
+        <h1>Hi, I'm Nikhil Sharma</h1>
+        <p>SEO Specialist | Web Optimizer | Growth Strategist</p>
+        <button class="button" onclick="window.location.href='#about'">Discover More</button>
+    </div>
+
+    <script>
+        // Optional - Adding smooth scroll to 'Discover More' button
+        document.querySelector('.button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
