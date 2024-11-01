@@ -5,45 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nikhil Sharma - SEO Lead Portfolio</title>
     <style>
-        /* Basic Styles */
+        /* General Styling */
         body { font-family: Arial, sans-serif; margin: 0; transition: background-color 0.5s, color 0.5s; }
         .light-theme { background-color: #f5f5f5; color: #333; }
         .dark-theme { background-color: #333; color: #f5f5f5; }
-        .header, .nav, .content, .footer { text-align: center; padding: 20px; }
-        .nav a { margin: 0 15px; text-decoration: none; font-weight: bold; }
-        .hero { padding: 100px 20px; position: relative; overflow: hidden; }
-        .hero h1 { font-size: 2.5em; margin-bottom: 0.5em; }
-        .hero p { font-size: 1.2em; }
-        .button { padding: 10px 20px; font-weight: bold; margin-top: 20px; cursor: pointer; border: none; border-radius: 5px; }
-        .button:hover { opacity: 0.9; }
-
-        /* Theme Colors */
-        .light-theme .nav a, .light-theme .button { color: #008080; background-color: #fff; }
-        .dark-theme .nav a, .dark-theme .button { color: #f5f5f5; background-color: #444; }
-
-        /* Animated Heading */
-        .animated-heading span { display: inline-block; opacity: 0; }
+        .container { padding: 40px; max-width: 1200px; margin: auto; }
+        .section { margin: 50px 0; text-align: center; }
+        h1, h2 { color: #008080; }
+        .button { padding: 10px 20px; border-radius: 5px; border: none; font-weight: bold; cursor: pointer; margin: 10px; }
+        .light-theme .button { background-color: #008080; color: #fff; }
+        .dark-theme .button { background-color: #444; color: #f5f5f5; }
+        .cta-buttons { margin-top: 20px; }
+        .skills-list, .project-list, .experience-list, .testimonial-list { list-style: none; padding: 0; }
+        .footer { text-align: center; padding: 20px; }
+        .social-links a { margin: 0 10px; text-decoration: none; }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body class="light-theme">
-    <div class="header">
-        <h1 class="animated-heading">Welcome to Nikhil Sharma's SEO Portfolio</h1>
-    </div>
-    <div class="nav">
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <div class="hero">
-        <h1>Hi, I'm Nikhil Sharma</h1>
+    <!-- Hero Section -->
+    <header class="section">
+        <h1 class="animated-heading">Hi, I'm Nikhil Sharma</h1>
         <p>SEO Lead | Growth Strategist | Content Optimizer</p>
-        <p>Explore my work, achievements, and insights in SEO.</p>
-    </div>
-    <div class="footer">
-        <p>Connect with me on LinkedIn and Twitter.</p>
+        <p>I help businesses drive visibility and growth through strategic SEO practices.</p>
+        <div class="cta-buttons">
+            <button class="button">View My Work</button>
+            <button class="button">Contact Me</button>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section class="section">
+        <h2>About Me</h2>
+        <p>With over 7 years of experience in SEO, I have worked with diverse clients to enhance their online presence. My approach focuses on results-driven strategies and data-backed decisions.</p>
+    </section>
+
+    <!-- Skills/Expertise Section -->
+    <section class="section">
+        <h2>Skills & Expertise</h2>
+        <ul class="skills-list">
+            <li>Technical SEO</li>
+            <li>Content Optimization</li>
+            <li>Keyword Research</li>
+            <li>Analytics & Data Interpretation</li>
+        </ul>
+    </section>
+
+    <!-- Portfolio/Projects Section -->
+    <section class="section">
+        <h2>Portfolio</h2>
+        <ul class="project-list">
+            <li>Project 1: SEO Optimization for eCommerce (link)</li>
+            <li>Project 2: Growth Strategy for Tech Startup (link)</li>
+        </ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section">
+        <h2>Experience</h2>
+        <ul class="experience-list">
+            <li>SEO Lead at Company A - Achieved 120% growth in traffic</li>
+            <li>Content Strategist at Company B - Increased brand engagement by 30%</li>
+        </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <h2>Testimonials</h2>
+        <ul class="testimonial-list">
+            <li>"Nikhil's strategies increased our search rankings significantly." - Client A</li>
+            <li>"A true SEO expert who delivers results." - Client B</li>
+        </ul>
+    </section>
+
+    <!-- Blog/Insights Section -->
+    <section class="section">
+        <h2>Blog/Insights</h2>
+        <ul>
+            <li><a href="blog/blog1.html">Blog Post 1: 5 Tips for Effective SEO Audits</a></li>
+            <li><a href="blog/blog2.html">Blog Post 2: Improving Website Rankings with On-Page SEO</a></li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out via email at <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+        </div>
+    </section>
+
+    <!-- Footer with Toggle Button -->
+    <footer class="footer">
         <button class="button" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
-    </div>
+        <p>&copy; 2024 Nikhil Sharma. All rights reserved.</p>
+    </footer>
 
     <script>
         // Split the header text into spans for animation
@@ -61,9 +119,8 @@
 
         // Light/Dark Mode Toggle
         function toggleTheme() {
-            const body = document.body;
-            body.classList.toggle('light-theme');
-            body.classList.toggle('dark-theme');
+            document.body.classList.toggle('light-theme');
+            document.body.classList.toggle('dark-theme');
         }
     </script>
 </body>
