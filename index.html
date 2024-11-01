@@ -11,14 +11,24 @@
         .dark-theme { background-color: #333; color: #f5f5f5; }
         .container { padding: 40px; max-width: 1200px; margin: auto; }
         .section { margin: 50px 0; text-align: center; }
-        h1, h2 { color: #008080; }
         .button { padding: 10px 20px; border-radius: 5px; border: none; font-weight: bold; cursor: pointer; margin: 10px; }
-        .light-theme .button { background-color: #008080; color: #fff; }
-        .dark-theme .button { background-color: #444; color: #f5f5f5; }
         .cta-buttons { margin-top: 20px; }
-        .skills-list, .project-list, .experience-list, .testimonial-list { list-style: none; padding: 0; }
         .footer { text-align: center; padding: 20px; }
         .social-links a { margin: 0 10px; text-decoration: none; }
+
+        /* Layout Styles */
+        .content-container { display: flex; align-items: center; padding: 20px; }
+        .content-container img { width: 40%; height: auto; border-radius: 10px; }
+        .content-container:nth-child(even) { flex-direction: row-reverse; }
+        .content-text { padding: 0 20px; flex: 1; text-align: left; }
+        .content-text h2 { color: #008080; }
+
+        /* Theme Colors */
+        .light-theme .button { background-color: #008080; color: #fff; }
+        .dark-theme .button { background-color: #444; color: #f5f5f5; }
+
+        /* Animated Heading */
+        .animated-heading span { display: inline-block; opacity: 0; }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
@@ -34,36 +44,49 @@
         </div>
     </header>
 
-    <!-- About Me Section -->
+    <!-- About Me Section with Image -->
     <section class="section">
-        <h2>About Me</h2>
-        <p>With over 7 years of experience in SEO, I have worked with diverse clients to enhance their online presence. My approach focuses on results-driven strategies and data-backed decisions.</p>
+        <div class="content-container">
+            <img src="https://via.placeholder.com/400x300" alt="About Me Image">
+            <div class="content-text">
+                <h2>About Me</h2>
+                <p>With over 7 years of experience in SEO, I have worked with diverse clients to enhance their online presence. My approach focuses on results-driven strategies and data-backed decisions.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Skills/Expertise Section -->
+    <!-- Skills/Expertise Section with Image -->
     <section class="section">
-        <h2>Skills & Expertise</h2>
-        <ul class="skills-list">
-            <li>Technical SEO</li>
-            <li>Content Optimization</li>
-            <li>Keyword Research</li>
-            <li>Analytics & Data Interpretation</li>
-        </ul>
+        <div class="content-container">
+            <div class="content-text">
+                <h2>Skills & Expertise</h2>
+                <ul>
+                    <li>Technical SEO</li>
+                    <li>Content Optimization</li>
+                    <li>Keyword Research</li>
+                    <li>Analytics & Data Interpretation</li>
+                </ul>
+            </div>
+            <img src="https://via.placeholder.com/400x300" alt="Skills Image">
+        </div>
     </section>
 
-    <!-- Portfolio/Projects Section -->
+    <!-- Portfolio/Projects Section with Image -->
     <section class="section">
-        <h2>Portfolio</h2>
-        <ul class="project-list">
-            <li>Project 1: SEO Optimization for eCommerce (link)</li>
-            <li>Project 2: Growth Strategy for Tech Startup (link)</li>
-        </ul>
+        <div class="content-container">
+            <img src="https://via.placeholder.com/400x300" alt="Portfolio Image">
+            <div class="content-text">
+                <h2>Portfolio</h2>
+                <p>Project 1: SEO Optimization for eCommerce (link)</p>
+                <p>Project 2: Growth Strategy for Tech Startup (link)</p>
+            </div>
+        </div>
     </section>
 
     <!-- Experience Section -->
     <section class="section">
         <h2>Experience</h2>
-        <ul class="experience-list">
+        <ul>
             <li>SEO Lead at Company A - Achieved 120% growth in traffic</li>
             <li>Content Strategist at Company B - Increased brand engagement by 30%</li>
         </ul>
@@ -72,7 +95,7 @@
     <!-- Testimonials Section -->
     <section class="section">
         <h2>Testimonials</h2>
-        <ul class="testimonial-list">
+        <ul>
             <li>"Nikhil's strategies increased our search rankings significantly." - Client A</li>
             <li>"A true SEO expert who delivers results." - Client B</li>
         </ul>
